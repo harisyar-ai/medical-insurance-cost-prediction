@@ -230,29 +230,19 @@ st.markdown("""
 # ─── Model loading with better diagnostics ──────────────────────────────────
 @st.cache_resource
 def load_model():
-    # Try multiple possible paths
-    possible_paths = [
-        os.path.join("models", "model.pkl"),
-        os.path.join(".", "models", "model.pkl"),
-        "model.pkl",
-        os.path.join("..", "models", "model.pkl")
-    ]
-    
-    for path in possible_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'rb') as f:
-                    model = pickle.load(f)
-                st.success(f"Model loaded successfully from: {path}")
-                return model
-            except Exception as e:
-                st.error(f"Found model at {path} but loading failed: {str(e)}")
-                continue
-    
-    # If none worked, show error
-    st.error("Model file not found in any expected location.")
-    st.info("Searched paths: " + ", ".join(possible_paths))
-    return None
+    path = "Medical_Insurance_Cost_Prediction/models/model.pkl"
+    try:
+        with open(path, 'rb') as f:
+            model = pickle.load(f)
+        return model
+    except FileNotFoundError:
+        st.error(f"Model file not found: {path}")
+        return None
+    except Exception as e:
+        st.error(f"Model loading failed: {str(e)}")
+        with st.expander("Full traceback"):
+            st.code(traceback.format_exc())
+        return None
 
 model = load_model()
 
