@@ -197,7 +197,7 @@ streamlit run app/app.py
 ---
 
 * ```
-            Developed by **Haider • Shehzad • Haris**
+            Developed by Haider • Shehzad • Haris
                          February 2026
           Stars & feedback are highly appreciated ⭐
                    github.com/harisyar-ai
