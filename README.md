@@ -147,7 +147,29 @@ This project uses the **Medical Cost Personal Dataset** from Kaggle, which inclu
 5. **Model Selection & Training**
 
    * Tested multiple regressors: Linear, Ridge, Lasso, ElasticNet, DecisionTree, ExtraTrees, GradientBoosting, AdaBoost, SVR, KNN, MLP, LightGBM, CatBoost, XGBoost, RandomForest
-   * Random Forest selected as final model based on highest R² score
+   * Performance on Test Set :
+     | Model            | R² Score | MAE       | RMSE      |
+     | ---------------- | -------- | --------- | --------- |
+     | RandomForest     | 0.9246   | 1,536.05  | 3,296.82  |
+     | KNN              | 0.9051   | 1,983.19  | 3,697.76  |
+     | AdaBoost         | 0.8957   | 3,016.66  | 3,877.30  |
+     | LightGBM         | 0.8885   | 2,348.80  | 4,008.53  |
+     | CatBoost         | 0.8871   | 2,179.42  | 4,033.65  |
+     | GradientBoosting | 0.8842   | 2,124.93  | 4,085.34  |
+     | ExtraTrees       | 0.8819   | 2,105.95  | 4,126.54  |
+     | LinearRegression | 0.8766   | 2,279.57  | 4,217.06  |
+     | Ridge            | 0.8735   | 2,285.33  | 4,269.66  |
+     | SVR              | 0.8540   | 2,091.48  | 4,587.51  |
+     | XGBoost          | 0.8210   | 2,786.57  | 5,079.80  |
+     | ElasticNet       | 0.7999   | 2,868.48  | 5,371.01  |
+     | DecisionTree     | 0.7826   | 2,494.58  | 5,598.67  |
+     | Lasso            | 0.6252   | 3,691.84  | 7,350.03  |
+     | MLP              | -64.2322 | 28,354.34 | 96,972.10 |
+
+   * Random Forest was selected as the final model based on highest R² score and lowest MAE/RMSE,
+     making it the most accurate and robust model for predicting medical insurance costs.
+   
+
 
 ---
 
