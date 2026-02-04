@@ -1,79 +1,101 @@
-# 🩺 Medical Insurance Cost Prediction 2026
-### AI-Powered Prediction Using Random Forest & Feature Engineering
+🩺 # Medical Insurance Cost Prediction 2026
+### Machine Learning-Based Health Insurance Cost Estimator
 
-<div align="center" style="margin-bottom:20px;">
-  <img src="-profile_img.png" alt="Medical Insurance Cost Predictor" width="95%">
+<div align="center">
+  <img src="https://raw.githubusercontent.com/harisyar-ai/medical-insurance-cost-prediction/main/profile_img.png" alt="Medical Insurance Cost Predictor" width="95%">
 </div>
 
 <div align="center">
-  <span style="background-color:#F5F5F5; padding:5px 10px; border-radius:8px;">
-    <a href="https://python.org" target="_blank">
-      <img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python 3.11+">
-    </a>
-    <a href="https://scikit-learn.org" target="_blank">
-      <img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikit-learn" alt="Scikit-Learn">
-    </a>
-    <a href="https://streamlit.io" target="_blank">
-      <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
-    </a>
-    <a href="LICENSE" target="_blank">
-      <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
-    </a>
-  </span>
+
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python)](https://python.org)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit)](https://streamlit.io)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
 </div>
 
 ---
 
-<div style="background-color:#f0f8ff; padding:20px; border-left:6px solid #007ACC; margin-bottom:20px;">
-<h2>Project Overview</h2>
-<p>The Medical Insurance Cost Predictor estimates annual health insurance costs using demographic and health features. Leveraging feature engineering and Random Forest Regression, it delivers accurate predictions for individuals and healthcare providers.</p>
-<ul>
-  <li>Estimate insurance costs using age, BMI, number of children, region, gender, and smoker status</li>
-  <li>Learn advanced feature engineering and regression techniques</li>
-  <li>Deploy ML models interactively with Streamlit for instant predictions</li>
-</ul>
+## Project Overview
+
+The **Medical Insurance Cost Prediction** project is a machine learning application designed to **estimate annual health insurance costs** based on demographic and health-related features.  
+
+The model is trained on real-world medical insurance data and includes **extensive feature engineering**, combining numerical, categorical, polynomial, and interaction features to maximize prediction accuracy.  
+
+This project is ideal for:  
+
+- Individuals wanting to estimate health insurance costs,  
+- Students and developers learning regression and feature engineering,  
+- Professionals exploring real-world applications of ML pipelines and Streamlit deployment.  
+
+---
+
+## Why This Project Matters
+
+Health insurance costs are often opaque and vary widely depending on age, BMI, smoking status, region, and family history. Most individuals struggle to estimate their expected charges or understand the factors driving costs.  
+
+This project addresses that gap by providing a **fast, explainable, and interactive ML-based estimator**, helping users make informed decisions about insurance planning.  
+
+**Key benefits**:  
+- Accurate cost estimation without complex formulas or actuarial knowledge,  
+- Interactive exploration of feature impacts on insurance cost,  
+- Hands-on example of **feature engineering and regression modeling**,  
+- Useful for both educational purposes and practical cost planning.  
+
+**Who benefits**:  
+- Policy seekers estimating insurance premiums,  
+- Students learning regression models, pipelines, and feature engineering,  
+- Developers building predictive analytics apps,  
+- Health planners and analysts exploring data-driven insights.  
+
+---
+
+## Live Web App
+
+<div style="padding:10px; font-size:100%; text-align:left;">
+    URL: 
+    <a href="https://your-app-link.streamlit.app/" target="_blank">
+        Click here to open the Medical Insurance Cost Predictor
+    </a>
 </div>
 
-<div style="background-color:#fff8dc; padding:20px; border-left:6px solid #FFA500; margin-bottom:20px;">
-<h2>Why This Project Matters</h2>
-<p>Healthcare costs are complex and rising, making budgeting and planning challenging for individuals and insurance providers. This project provides:</p>
-<ul>
-  <li>Quick, data-driven insurance cost estimates to support personal financial planning</li>
-  <li>Insights for insurance companies to better understand risk factors</li>
-  <li>Interactive web interface for instant predictions without technical expertise</li>
-  <li>Hands-on educational insight into machine learning regression, preprocessing, and feature engineering</li>
-</ul>
-<p>Target Users: Individuals planning healthcare budgets, ML students, healthcare startups, and insurance professionals.</p>
+---
+
+## Dataset Overview — Medical Insurance Dataset
+
+This project uses the **Medical Cost Personal Dataset** from Kaggle, which includes demographic and health metrics relevant to insurance charges.  
+
+### **Entries**
+- 1,338 individual records
+
+### **Columns**
+
+| Column       | Description                                   |
+|--------------|-----------------------------------------------|
+| age          | Age of the individual                          |
+| sex          | Gender of the individual                        |
+| bmi          | Body Mass Index                                |
+| children     | Number of children                              |
+| smoker       | Smoker status (yes/no)                          |
+| region       | Residential region                             |
+| charges      | Annual medical insurance charges (target)      |
+
+### **Dataset Details**
+- Format: CSV  
+- Size: ~10 KB  
+- License: Public dataset on Kaggle
+
+**Dataset Link**:  
+<div style="padding:10px; font-size:100%; text-align:left;">
+    <a href="https://www.kaggle.com/datasets/mirichoi0218/insurance" target="_blank">
+        Click here for the Medical Insurance Dataset
+    </a>
 </div>
 
-<div style="background-color:#e6ffe6; padding:20px; border-left:6px solid #32CD32; margin-bottom:20px;">
-<h2>Live Web App</h2>
-<p>
-<a href="https://medical-insurance-cost-predictor.streamlit.app/" target="_blank" style="color:#006400; font-weight:bold;">
-Click here to try the Medical Insurance Cost Predictor
-</a>
-</p>
-</div>
+---
 
-<div style="background-color:#fff0f5; padding:20px; border-left:6px solid #C71585; margin-bottom:20px;">
-<h2>Dataset Overview — Medical Insurance Dataset</h2>
-<p><b>Entries:</b> 1,338 | <b>Columns:</b> 7</p>
-<table>
-<tr><th>Column</th><th>Description</th></tr>
-<tr><td>age</td><td>Age of primary beneficiary</td></tr>
-<tr><td>sex</td><td>Gender</td></tr>
-<tr><td>bmi</td><td>Body mass index</td></tr>
-<tr><td>children</td><td>Number of children covered</td></tr>
-<tr><td>smoker</td><td>Smoker status (yes/no)</td></tr>
-<tr><td>region</td><td>Residential region (northeast, southeast, southwest, northwest)</td></tr>
-<tr><td>charges</td><td>Individual medical costs billed by insurance</td></tr>
-</table>
-<p><b>Dataset Link:</b> <a href="https://www.kaggle.com/datasets/mirichoi0218/insurance" target="_blank">Kaggle: Medical Insurance Dataset</a></p>
-</div>
-
-<div style="background-color:#f5f5dc; padding:20px; border-left:6px solid #8B4513; margin-bottom:20px;">
-<h2>Repository Structure</h2>
-<pre>
+## Repository Structure
+```text
 .
 📁 Medical_Insurance_Cost_Prediction/
 ├── profile_img.png                 ← Project banner
@@ -83,58 +105,78 @@ Click here to try the Medical Insurance Cost Predictor
 ├── requirements.txt
 ├── data/
 │   ├── Raw/
-│   │   └── insurance.csv       ← Raw Dataset
+│   │   └── insurance.csv          ← Raw Dataset
 │   └── Processed/
-│       └── cleaned_dataset.csv           ← Cleaned Dataset
-|   └── Report/
-        └── Medical_Insurance_Cost_Prediction.html ← Summary Report of the Dataset
+│       └── cleaned_dataset.csv    ← Cleaned Dataset
+│   └── Report/
+│       └── Medical_Insurance_Cost_Prediction.html ← Summary Report of the Dataset
 ├── src/
-│   ├── file.ipynb                   ← main programming file (preprocessing & training)
+│   ├── file.ipynb                 ← Main programming file (preprocessing & training)
 ├── models/
-│   └── model.pkl       ← Random Forest pkl file   
+│   └── model.pkl                   ← Random Forest pkl file
 └── app/
-    └── app.py                ← Interactive Streamlit web app
-</pre>
-</div>
+    └── app.py                      ← Interactive Streamlit web app
+````
 
-<div style="background-color:#e0ffff; padding:20px; border-left:6px solid #20B2AA; margin-bottom:20px;">
-<h2>How It Works / Feature Processing</h2>
-<ol>
-<li><b>Data Cleaning:</b> Remove duplicates, handle missing values, and standardize numeric & categorical data</li>
-<li><b>Feature Engineering:</b> Create interaction terms, polynomial features, BMI categories, smoker status encoding, and region one-hot encoding</li>
-<li><b>Train-Test Split:</b> Stratified split based on smoker status to maintain proportional distribution</li>
-<li><b>Preprocessing Pipeline:</b> OneHotEncoder for nominal features, OrdinalEncoder for ordered categorical features, numeric passthrough</li>
-<li><b>Output Transformation:</b> Log transformation of charges for model stability and reducing skew</li>
-<li><b>Model Training:</b> Multiple regression models tested (Linear Regression, SVR, Random Forest), with Random Forest achieving highest accuracy</li>
-<li><b>Evaluation:</b> Metrics include R², RMSE, and MAE for robust performance assessment</li>
-<li><b>Deployment:</b> Streamlit app enables users to input personal information and get real-time predictions</li>
-</ol>
-</div>
+---
 
-<div style="background-color:#ffe4e1; padding:20px; border-left:6px solid #FF69B4; margin-bottom:20px;">
-<h2>Run Locally</h2>
-<pre>
-git clone https://github.com/harisyar-ai/Medical_Insurance_Cost_Prediction.git
-cd Medical_Insurance_Cost_Prediction
+## How Features Are Processed
+
+1. **Data Cleaning & Preprocessing**
+
+   * Remove duplicates, handle missing values
+   * Stratified train-test split to maintain smoker ratio
+
+2. **Feature Engineering**
+
+   * Binary smoker variable
+   * Polynomial & interaction features (age², bmi², age*bmi, smoker*bmi, etc.)
+   * Binning features: age groups & BMI categories
+   * Boolean flags like `has_children`
+
+3. **Encoding & Transformation**
+
+   * One-hot encoding for categorical features (`sex`, `region`, `bmi_category`, `age_group`)
+   * Ordinal encoding for smoker
+   * Log transformation on `charges` for better regression performance
+
+4. **Pipeline Construction**
+
+   * Combined preprocessing + model in a `Pipeline` for reproducibility and deployment
+
+5. **Model Selection & Training**
+
+   * Tested multiple regressors: Linear, Ridge, Lasso, ElasticNet, DecisionTree, ExtraTrees, GradientBoosting, AdaBoost, SVR, KNN, MLP, LightGBM, CatBoost, XGBoost, RandomForest
+   * Random Forest selected as final model based on highest R² score
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/harisyar-ai/medical-insurance-cost-prediction.git
+cd medical-insurance-cost-prediction
 pip install -r requirements.txt
 streamlit run app/app.py
-</pre>
-</div>
+```
 
-<div style="background-color:#f0fff0; padding:20px; border-left:6px solid #228B22; margin-bottom:20px;">
-<h2>Future Improvements</h2>
-<ul>
-<li>Add SHAP/LIME visualizations for model explainability</li>
-<li>Ensemble stacking for higher prediction accuracy</li>
-<li>Include additional demographic, lifestyle, and medical features</li>
-<li>Multi-language support for the Streamlit UI</li>
-<li>Mobile-friendly responsive version of the web app</li>
-</ul>
-</div>
+---
 
-<div align="center" style="padding:20px; margin-top:20px; border-top:2px solid #ccc;">
-Developed by <b>Haider • Shehzad • Haris</b> — February 2026  
-Stars & feedback are highly appreciated  
-<br>
-<a href="https://github.com/harisyar-ai" target="_blank">github.com/harisyar-ai</a>
-</div>
+## Future Improvements
+
+* Integrate SHAP/LIME for feature importance visualization
+* Add more advanced ML models (e.g., XGBoost or ensemble stacking)
+* Include real-time cost comparison based on region and age group
+* Add historical or trend-based insurance analysis
+
+---
+
+
+---
+
+* ```
+            Developed by **Haider • Shehzad • Haris**
+                         February 2026
+          Stars & feedback are highly appreciated ⭐
+                   github.com/harisyar-ai
+  ```
