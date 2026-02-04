@@ -54,7 +54,7 @@ This project addresses that gap by providing a **fast, explainable, and interact
 
 <div style="padding:10px; font-size:100%; text-align:left;">
     URL: 
-    <a href="https://your-app-link.streamlit.app/" target="_blank">
+    <a href="https://medical-insurance-cost-prediction-system.streamlit.app/" target="_blank">
         Click here to open the Medical Insurance Cost Predictor
     </a>
 </div>
