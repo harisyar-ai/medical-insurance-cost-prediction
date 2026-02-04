@@ -69,29 +69,31 @@ Click here to try the Medical Insurance Cost Predictor
 </table>
 <p><b>Dataset Link:</b> <a href="https://www.kaggle.com/datasets/mirichoi0218/insurance" target="_blank">Kaggle: Medical Insurance Dataset</a></p>
 </div>
-
+---
 <div style="background-color:#f5f5dc; padding:20px; border-left:6px solid #8B4513; margin-bottom:20px;">
 <h2> Repository Structure</h2>
-<pre>
-📂 Medical_Insurance_Cost_Prediction/
-├── insurance_banner.jpeg                ← Project banner
+<pre>.
+📁 Medical_Insurance_Cost_Prediction/
+├── profile_img.png                 ← Project banner
 ├── README.md
 ├── LICENSE
 ├── .gitignore
 ├── requirements.txt
 ├── data/
 │   ├── Raw/
-│   │   └── insurance.csv
+│   │   └── insurance.csv       ← Raw Dataset
 │   └── Processed/
-│       └── cleaned_dataset.csv
+│       └── cleaned_dataset.csv           ← Cleaned Dataset
+|   └── Report/
+        └── Medical_Insurance_Cost_Prediction.html ← Summary Report of the Dataset
 ├── src/
-│   ├── feature_engineering.py
-│   └── model_training.py
+│   ├── file.ipynb                   ← main programming file (preprocessing & training)
 ├── models/
-│   └── model.pkl
+│   └── model.pkl       ← Random Forest pkl file   
 └── app/
-    └── app.py
+    └── app.py                ← Interactive Streamlit web app
 </pre>
+---  
 </div>
 
 <div style="background-color:#e0ffff; padding:20px; border-left:6px solid #20B2AA; margin-bottom:20px;">
@@ -127,10 +129,9 @@ streamlit run app/app.py
 <li>Mobile-friendly responsive version</li>
 </ul>
 </div>
-
-<div align="center" style="padding:20px; margin-top:20px; border-top:2px solid #ccc;">
-Developed by <b>Haider • Shehzad • Haris</b> — February 2026  
-Stars & feedback are highly appreciated ⭐  
-<br>
-<a href="https://github.com/harisyar-ai" target="_blank">github.com/harisyar-ai</a>
-</div>
+---
+                            December 2025
+                 Developed by Haider • Shehzad • Haris
+              Stars & feedback are highly appreciated ⭐
+  
+                      github.com/harisyar-ai
