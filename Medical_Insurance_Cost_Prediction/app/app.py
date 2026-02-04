@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import traceback
-import os
 
 st.set_page_config(
     page_title="Medical Insurance Cost Predictor",
@@ -243,12 +242,14 @@ def load_model():
         with st.expander("Full traceback"):
             st.code(traceback.format_exc())
         return None
-
 model = load_model()
 
 # Early exit if model cannot be loaded
 if model is None:
     st.warning("The prediction model could not be loaded. Prediction features are disabled.")
+    st.info("Please verify that the file exists and is a valid pickled model:\n" + 
+            # r"F:\PYTHON\ML_Projects\Medical_Insurance_Cost_Prediction\models\model.pkl")
+            r"Medical_Insurance_Cost_Prediction\models\model.pkl")
 
 # ─── Feature engineering ────────────────────────────────────────────────────
 def add_engineered_features(df):
