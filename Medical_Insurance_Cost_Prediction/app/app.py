@@ -229,21 +229,19 @@ st.markdown("""
 # ─── Model loading with better diagnostics ──────────────────────────────────
 @st.cache_resource
 def load_model():
-    # path = r"F:\PYTHON\ML_Projects\Medical_Insurance_Cost_Prediction\models\model.pkl"
-    path = r"models\model.pkl"
+    path = "models/model.pkl"  # Use forward slashes, no 'r' prefix needed
     try:
         with open(path, 'rb') as f:
             model = pickle.load(f)
         return model
     except FileNotFoundError:
-        st.error(f"Model file not found:\n{path}")
+        st.error(f"Model file not found: {path}")
         return None
     except Exception as e:
-        st.error(f"Model loading failed:\n{str(e)}")
+        st.error(f"Model loading failed: {str(e)}")
         with st.expander("Full traceback"):
             st.code(traceback.format_exc())
         return None
-
 model = load_model()
 
 # Early exit if model cannot be loaded
