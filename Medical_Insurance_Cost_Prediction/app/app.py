@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import traceback
+import os
 
 st.set_page_config(
     page_title="Medical Insurance Cost Predictor",
@@ -229,27 +230,35 @@ st.markdown("""
 # ─── Model loading with better diagnostics ──────────────────────────────────
 @st.cache_resource
 def load_model():
-    path = "models/model.pkl"  # Use forward slashes, no 'r' prefix needed
-    try:
-        with open(path, 'rb') as f:
-            model = pickle.load(f)
-        return model
-    except FileNotFoundError:
-        st.error(f"Model file not found: {path}")
-        return None
-    except Exception as e:
-        st.error(f"Model loading failed: {str(e)}")
-        with st.expander("Full traceback"):
-            st.code(traceback.format_exc())
-        return None
+    # Try multiple possible paths
+    possible_paths = [
+        os.path.join("models", "model.pkl"),
+        os.path.join(".", "models", "model.pkl"),
+        "model.pkl",
+        os.path.join("..", "models", "model.pkl")
+    ]
+    
+    for path in possible_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, 'rb') as f:
+                    model = pickle.load(f)
+                st.success(f"Model loaded successfully from: {path}")
+                return model
+            except Exception as e:
+                st.error(f"Found model at {path} but loading failed: {str(e)}")
+                continue
+    
+    # If none worked, show error
+    st.error("Model file not found in any expected location.")
+    st.info("Searched paths: " + ", ".join(possible_paths))
+    return None
+
 model = load_model()
 
 # Early exit if model cannot be loaded
 if model is None:
     st.warning("The prediction model could not be loaded. Prediction features are disabled.")
-    st.info("Please verify that the file exists and is a valid pickled model:\n" + 
-            # r"F:\PYTHON\ML_Projects\Medical_Insurance_Cost_Prediction\models\model.pkl")
-            r"Medical_Insurance_Cost_Prediction\models\model.pkl")
 
 # ─── Feature engineering ────────────────────────────────────────────────────
 def add_engineered_features(df):
