@@ -1,6 +1,12 @@
-numpy
-pandas
-scikit-learn
-joblib
-streamlit
+streamlit==1.19.0
+pandas==3.0.0
+numpy==2.4.2
+scikit-learn==1.8.0
+matplotlib
+seaborn
+scipy
+ydata-profiling
+lightgbm
+catboost
+xgboost
 altair==4.2.2
